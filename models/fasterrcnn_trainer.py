@@ -1,8 +1,8 @@
 import os
 import torch
 from torchvision.models.detection import fasterrcnn_resnet50_fpn
-from base_trainer import BaseTrainer
-from ..data.dataset_validator import validate_coco_json
+from .base_trainer import BaseTrainer
+from data.dataset_validator import validate_coco_json
 
 
 class FasterRCNNTrainer(BaseTrainer):
