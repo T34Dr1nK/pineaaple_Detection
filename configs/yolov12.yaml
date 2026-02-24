@@ -1,0 +1,6 @@
+seed: 42
+data: datasets/yolo/data.yaml
+epochs: 100
+imgsz: 640
+batch: 16
+experiment_name: yolov12_exp1

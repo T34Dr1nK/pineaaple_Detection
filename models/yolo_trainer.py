@@ -1,13 +1,13 @@
 import torch
 from ultralytics import YOLO
-from base_trainer import BaseTrainer
-from ..data.dataset_validator import validate_yolo_yaml
+from .base_trainer import BaseTrainer
+from data.dataset_validator import validate_yolo_yaml
 
 
 class YOLOTrainer(BaseTrainer):
     def __init__(self, model_name, config):
         super().__init__(config)
-        self.model_name = model_name
+        self.model_name = model_name + "n"
 
     def train(self):
         data_path = self.config["data"]

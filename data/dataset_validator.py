@@ -3,6 +3,7 @@ import yaml
 
 
 def validate_yolo_yaml(path):
+    print(path)
     if not os.path.exists(path):
         raise FileNotFoundError("data.yaml not found")
 
@@ -22,4 +23,3 @@ def validate_coco_json(path):
         raise FileNotFoundError("COCO annotation file not found")
 
     print("✅ COCO annotation file exists")
-

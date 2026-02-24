@@ -14,7 +14,7 @@ def load_config(path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--model", required=True, choices=["yolov11", "yolov12", "fasterrcnn"]
+        "--model", required=True, choices=["yolo11", "yolo12", "fasterrcnn"]
     )
     parser.add_argument("--config", required=True)
 
@@ -23,7 +23,7 @@ def main():
 
     set_seed(config.get("seed", 42))
 
-    if args.model in ["yolov11", "yolov12"]:
+    if args.model in ["yolo11", "yolo12"]:
         trainer = YOLOTrainer(args.model, config)
     else:
         trainer = FasterRCNNTrainer(config)
